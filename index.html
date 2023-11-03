@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menghitung Luas dan Keliling Bangun Datar</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h2>Menghitung Luas dan Keliling Bangun datar</h2>
+    <p>Pilih menu berikut untuk menghitung luas dan keliling bangun datar</p>
+    
+    <div class="tab">
+        <button style="color:indigo" class="tablinks" onclick="openShape('PersegiPanjang')">Persegi Panjang</button>
+        <button style="color:indianred" class="tablinks" onclick="openShape('Segitiga')">Segitiga</button>
+        <button style="color:brown" class="tablinks" onclick="openShape('Lingkaran')">Lingkaran</button>
+    </div>
+
+    <div id="PersegiPanjang" class="tabcontent">
+        <h3 style="color: cornflowerblue;">Persegi Panjang</h3>
+        <label for="squareLength">Panjang:</label>
+        <input type="number" id="squareLength">
+        <label for="squareWidth">Lebar:</label>
+        <input type="number" id="squareWidth">
+        <button onclick="calculateSquare()">Hitung</button>
+        <p>Hasil:</p>
+        <p>Luas: <span id="squareArea"></span></p>
+        <p>Keliling: <span id="squarePerimeter"></span></p>
+    </div>
+
+    <div id="Segitiga" class="tabcontent" style="display: none;">
+        <h3 style="color:blueviolet">Segitiga</h3>
+        <label for="side1">Sisi 1:</label>
+        <input type="number" id="side1">
+        <label for="side2">Sisi 2:</label>
+        <input type="number" id="side2">
+        <label for="side3">Sisi 3:</label>
+        <input type="number" id="side3">
+        <button onclick="calculateTriangle()">Hitung</button>
+        <p>Hasil:</p>
+        <p>Luas: <span id="triangleArea"></span></p>
+        <p>Keliling: <span id="trianglePerimeter"></span></p>
+    </div>
+
+    <div id="Lingkaran" class="tabcontent" style="display: none;">
+        <h3 style="color:blue;">Lingkaran</h3>
+        <label for="circleRadius">Jari-Jari:</label>
+        <input type="number" id="circleRadius">
+        <button onclick="calculateCircle()">Hitung</button>
+        <p>Hasil:</p>
+        <p>Luas: <span id="circleArea"></span></p>
+        <p>Keliling: <span id="circleCircumference"></span></p>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
